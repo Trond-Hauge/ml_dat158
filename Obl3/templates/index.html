@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang = en>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static', filename='css/general.css')}}">
+        <title>Hyper Lightweight ML</title>
+    </head>
+    <body>
+        <h1>Hyper Lightweight ML</h1>
+        <h2>TMDB Box Office Prediction</h2>
+        <div>
+            <form action="#" method="post">
+                <label for="bud">Budget:</label>
+                <input type="number" id="bud" name="bud" min="0" required>
+
+                <label for="pop">Popularity (between 0 and 300):</label>
+                <input type="range" id="pop" name="pop" min="0" max="300" required>
+
+                <label for="runt">Runtime in minutes:</label>
+                <input type="number" id="runt" name="runt" min="1" required>
+
+                <label for="rel">Release date:</label>
+                <input type="date" id="rel" name="rel" required>
+                
+                <input type="submit">
+            </form>
+        </div>
+        <div>
+            <h3>Prediction: {{res}} </h3>
+        </div>
+    </body>
+</html>
